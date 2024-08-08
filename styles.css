@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #4a90e2;
+}
+
+.view_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #e0e0e0;
+}
+
+.view_img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.choose_img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.choose_img button {
+  font-size: 1.1rem;
+  padding: 10px 30px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.choose_img button:hover {
+  background-color: #357ab8;
+}
+
+.choose_img button img {
+  margin-left: 10px;
+  width: 25px;
+}
+
+.slider {
+  margin-bottom: 15px;
+}
+
+.slider .filter_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.slider input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+.icons_filter {
+  margin-bottom: 20px;
+}
+
+.icons_filter p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.icons_room, .icons_room1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons_room button, .icons_room1 button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icons_room button:hover, .icons_room1 button:hover {
+  transform: scale(1.1);
+}
+
+.icons_room img, .icons_room1 img {
+  width: 30px;
+}
+
+.cropBtn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background-color: #29a745;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+.cropBtn:hover {
+  background-color: #218838;
+}
+
+.btn_contain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn_contain button {
+  width: 48%;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.reset:hover {
+  background-color: #c82333;
+}
+
+.save {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.save:hover {
+  background-color: #218838;
+}
+
+#demo_Crop {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  margin: 10px 0;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  padding: 3px;
+  border-radius: 4px;
+  display: none;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .choose_img button {
+    padding: 8px 20px;
+  }
+
+  .icons_room img, .icons_room1 img {
+    width: 25px;
+  }
+}

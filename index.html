@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Editor App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Photo Editor</h1>
+        <hr />
+        <div class="view_img">
+            <img src="images/one.png" alt="Uploaded Image" />
+        </div>
+
+        <div class="choose_img">
+            <button>Upload Image <img src="images/upload.png" alt="Upload Icon" /></button>
+            <input type="file" id="imageUploader" accept="image/*" hidden />
+        </div>
+
+        <img src="" id="demo_Crop" alt="Cropped Preview" />
+
+        <div class="slider">
+            <div class="filter_info">
+                <span class="name">brightness</span>
+                <span class="value">100%</span>
+            </div>
+            <input type="range" id="brightnessSlider" max="200" min="0" value="100" />
+        </div>
+
+        <div class="icons_filter">
+            <p>Filters</p>
+            <div class="icons_room">
+                <button title="brightness" id="brightness" class="active">
+                    <img src="images/brightness.png" alt="Brightness Icon" />
+                </button>
+                <button title="contrast" id="contrast">
+                    <img src="images/contrast.png" alt="Contrast Icon" />
+                </button>
+                <button title="saturate" id="saturate">
+                    <img src="images/opactiy.png" alt="Saturate Icon" />
+                </button>
+                <button title="invert" id="invert">
+                    <img src="images/invert.png" alt="Invert Icon" />
+                </button>
+                <button title="blur" id="blur">
+                    <img src="images/blur.png" alt="Blur Icon" />
+                </button>
+            </div>
+        </div>
+
+        <div class="icons_filter">
+            <p>Rotate & Flip</p>
+            <div class="icons_room1">
+                <button title="rotate_left" id="rotate_left">
+                    <img src="images/rotateleft.png" alt="Rotate Left Icon" />
+                </button>
+                <button title="rotate_right" id="rotate_right">
+                    <img src="images/rotateright.png" alt="Rotate Right Icon" />
+                </button>
+                <button title="flip_x" id="flip_x">
+                    <img src="images/flipx.png" alt="Flip X Icon" />
+                </button>
+                <button title="flip_y" id="flip_y">
+                    <img src="images/flipy.png" alt="Flip Y Icon" />
+                </button>
+                <button title="crop" id="crop">
+                    <img src="images/crop.png" alt="Crop Icon" />
+                </button>
+            </div>
+        </div>
+
+        <button class="cropBtn">Crop</button>
+
+        <div class="btn_contain">
+            <button class="reset">Reset Filter</button>
+            <button class="save">Save Image</button>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
