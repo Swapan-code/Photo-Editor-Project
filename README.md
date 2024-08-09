@@ -1,5 +1,6 @@
 # Photo Editor Web App
 
+
 This repository contains the source code for a **Photo Editor Web App** designed to provide a simple yet powerful interface for editing images directly in the browser.
 
 ## Features
@@ -18,19 +19,4 @@ This repository contains the source code for a **Photo Editor Web App** designed
 - **JavaScript (ES6)**: For interactivity and implementing the image editing functionalities.
 - **[Cropper.js](https://fengyuanchen.github.io/cropperjs/)**: A library used for cropping images.
 
-## Getting Started
 
-To run this app locally, follow these steps:
-
-### Prerequisites
-
-You need a web browser (like Chrome, Firefox, or Edge) that supports HTML5, CSS3, and ES6 JavaScript.
-
-### Installation
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/photo-editor-web-app.git
-   
-2. Navigate to the Project Directory:
-3. 
