@@ -2,6 +2,11 @@
 
 <a href="https://swapan-code.github.io/Photo-Editor-Project/">Live Link</a>
 <br>
+Screenshots:
+![image](https://github.com/user-attachments/assets/cc0dcc8b-3923-4dc0-aea2-363347cf7511)
+![image](https://github.com/user-attachments/assets/6a8f490e-3684-486e-b38e-589a6a92215d)
+
+
 This repository contains the source code for a **Photo Editor Web App** designed to provide a simple yet powerful interface for editing images directly in the browser.
 
 ## Features
