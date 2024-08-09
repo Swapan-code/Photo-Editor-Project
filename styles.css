@@ -5,12 +5,14 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f4f4f9;
   color: #333;
   display: grid;
   place-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .container {
@@ -91,6 +93,9 @@ body {
 
 .icons_filter {
   margin-bottom: 20px;
+  border: 1px solid #d0d0d0;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .icons_filter p {
@@ -99,24 +104,42 @@ body {
   margin-bottom: 10px;
 }
 
-.icons_room, .icons_room1 {
+.icons_room,
+.icons_room1 {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
-.icons_room button, .icons_room1 button {
+.icons_room button,
+.icons_room1 button {
   background: none;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.icons_room button:hover, .icons_room1 button:hover {
+.icons_room button:hover,
+.icons_room1 button:hover {
   transform: scale(1.1);
+  background-color: #f0f0f0;
 }
 
-.icons_room img, .icons_room1 img {
+.icons_room img,
+.icons_room1 img {
   width: 30px;
+}
+
+.icons_room button span,
+.icons_room1 button span {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #555;
 }
 
 .cropBtn {
@@ -170,6 +193,26 @@ body {
   background-color: #218838;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .choose_img button {
+    padding: 8px 20px;
+  }
+
+  .icons_room img,
+  .icons_room1 img {
+    width: 25px;
+  }
+
+  .icons_room button span,
+  .icons_room1 button span {
+    font-size: 0.7rem;
+  }
+}
+
 #demo_Crop {
   position: relative;
   left: 50%;
@@ -181,18 +224,4 @@ body {
   border-radius: 4px;
   display: none;
   object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
-
-  .choose_img button {
-    padding: 8px 20px;
-  }
-
-  .icons_room img, .icons_room1 img {
-    width: 25px;
-  }
 }
