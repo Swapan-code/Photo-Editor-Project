@@ -1,6 +1,7 @@
 # Photo Editor Web App
 
-<a href="https://swapan-code.github.io/Photo-Editor-Project/">Live Link</a>
+<a target="_blank" href="https://swapan-code.github.io/Photo-Editor-Project/">Live Link</a>
+<br>
 <br>
 Screenshots:
 <br>
