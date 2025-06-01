@@ -1,97 +1,153 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photo Editor App</title>
+    <title>Advanced Photo Editor</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <h1>Photo Editor</h1>
-        <hr />
-        <div class="view_img">
-            <img src="images/image.jpg" alt="Uploaded Image" />
-        </div>
-
-        <div class="choose_img">
-            <button>Upload Image <img src="images/upload.png" alt="Upload Icon" /></button>
-            <input type="file" id="imageUploader" accept="image/*" hidden />
-        </div>
-
-        <img src="" id="demo_Crop" alt="Cropped Preview" />
-
-        <div class="slider">
-            <div class="filter_info">
-                <span class="name">brightness</span>
-                <span class="value">100%</span>
-            </div>
-            <input type="range" id="brightnessSlider" max="200" min="0" value="100" />
-        </div>
-
-        <div class="icons_filter">
-            <p>Filters</p>
-            <div class="icons_room">
-                <button title="brightness" id="brightness" class="active">
-                    <img src="images/brightness.png" alt="Brightness Icon" />
-                    <span>Brightness</span>
-                </button>
-                <button title="contrast" id="contrast">
-                    <img src="images/contrast.png" alt="Contrast Icon" />
-                    <span>Contrast</span>
-                </button>
-                <button title="saturate" id="saturate">
-                    <img src="images/opactiy.png" alt="Saturate Icon" />
-                    <span>Saturation</span>
-                </button>
-                <button title="invert" id="invert">
-                    <img src="images/invert.png" alt="Invert Icon" />
-                    <span>Invert</span>
-                </button>
-                <button title="blur" id="blur">
-                    <img src="images/blur.png" alt="Blur Icon" />
-                    <span>Blur</span>
-                </button>
+        <div class="editor-header">
+            <h1><i class="fas fa-camera-retro"></i> Advanced Photo Editor</h1>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
             </div>
         </div>
 
-        <div class="icons_filter">
-            <p>Rotate & Flip</p>
-            <div class="icons_room1">
-                <button title="rotate_left" id="rotate_left">
-                    <img src="images/rotateleft.png" alt="Rotate Left Icon" />
-                    <span>Rotate Left</span>
-                </button>
-                <button title="rotate_right" id="rotate_right">
-                    <img src="images/rotateright.png" alt="Rotate Right Icon" />
-                    <span>Rotate Right</span>
-                </button>
-                <button title="flip_x" id="flip_x">
-                    <img src="images/flipx.png" alt="Flip X Icon" />
-                    <span>Flip Horizontal</span>
-                </button>
-                <button title="flip_y" id="flip_y">
-                    <img src="images/flipy.png" alt="Flip Y Icon" />
-                    <span>Flip Vertical</span>
-                </button>
-                <button title="crop" id="crop">
-                    <img src="images/crop.png" alt="Crop Icon" />
-                    <span>Crop</span>
-                </button>
+        <div class="editor-main">
+            <div class="editor-sidebar">
+                <div class="tool-section">
+                    <h3><i class="fas fa-upload"></i> Upload</h3>
+                    <div class="choose_img">
+                        <button class="upload-btn">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Upload Image</span>
+                        </button>
+                        <input type="file" id="imageUploader" accept="image/*" hidden />
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3><i class="fas fa-sliders-h"></i> Adjustments</h3>
+                    <div class="slider">
+                        <div class="filter_info">
+                            <span class="name">brightness</span>
+                            <span class="value">100%</span>
+                        </div>
+                        <input type="range" id="brightnessSlider" max="200" min="0" value="100" />
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3><i class="fas fa-magic"></i> Filters</h3>
+                    <div class="filter-grid">
+                        <button title="brightness" id="brightness" class="active">
+                            <i class="fas fa-sun"></i>
+                            <span>Brightness</span>
+                        </button>
+                        <button title="contrast" id="contrast">
+                            <i class="fas fa-adjust"></i>
+                            <span>Contrast</span>
+                        </button>
+                        <button title="saturate" id="saturate">
+                            <i class="fas fa-palette"></i>
+                            <span>Saturation</span>
+                        </button>
+                        <button title="invert" id="invert">
+                            <i class="fas fa-inverse"></i>
+                            <span>Invert</span>
+                        </button>
+                        <button title="blur" id="blur">
+                            <i class="fas fa-blur"></i>
+                            <span>Blur</span>
+                        </button>
+                        <button title="grayscale" id="grayscale">
+                            <i class="fas fa-circle-half-stroke"></i>
+                            <span>Grayscale</span>
+                        </button>
+                        <button title="sepia" id="sepia">
+                            <i class="fas fa-image"></i>
+                            <span>Sepia</span>
+                        </button>
+                        <button title="hue" id="hue">
+                            <i class="fas fa-rainbow"></i>
+                            <span>Hue</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3><i class="fas fa-crop-alt"></i> Transform</h3>
+                    <div class="transform-grid">
+                        <button title="rotate_left" id="rotate_left">
+                            <i class="fas fa-undo"></i>
+                            <span>Rotate Left</span>
+                        </button>
+                        <button title="rotate_right" id="rotate_right">
+                            <i class="fas fa-redo"></i>
+                            <span>Rotate Right</span>
+                        </button>
+                        <button title="flip_x" id="flip_x">
+                            <i class="fas fa-arrows-alt-h"></i>
+                            <span>Flip H</span>
+                        </button>
+                        <button title="flip_y" id="flip_y">
+                            <i class="fas fa-arrows-alt-v"></i>
+                            <span>Flip V</span>
+                        </button>
+                        <button title="crop" id="crop">
+                            <i class="fas fa-crop"></i>
+                            <span>Crop</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3><i class="fas fa-wand-magic-sparkles"></i> Effects</h3>
+                    <div class="effects-grid">
+                        <button title="vignette" id="vignette">
+                            <i class="fas fa-circle"></i>
+                            <span>Vignette</span>
+                        </button>
+                        <button title="noise" id="noise">
+                            <i class="fas fa-brush"></i>
+                            <span>Noise</span>
+                        </button>
+                        <button title="pixelate" id="pixelate">
+                            <i class="fas fa-th"></i>
+                            <span>Pixelate</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editor-content">
+                <div class="view_img">
+                    <img src="images/image.jpg" alt="Uploaded Image" />
+                </div>
+                <img src="" id="demo_Crop" alt="Cropped Preview" />
+                <button class="cropBtn">Apply Crop</button>
             </div>
         </div>
 
-        <button class="cropBtn">Crop</button>
-
-        <div class="btn_contain">
-            <button class="reset">Reset Filter</button>
-            <button class="save">Save Image</button>
+        <div class="editor-footer">
+            <button class="reset">
+                <i class="fas fa-undo"></i>
+                Reset All
+            </button>
+            <button class="save">
+                <i class="fas fa-download"></i>
+                Save Image
+            </button>
         </div>
     </div>
 
